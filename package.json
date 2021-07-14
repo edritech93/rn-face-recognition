@@ -1,0 +1,47 @@
+{
+  "name": "rn-face-recognition",
+  "version": "1.0.0",
+  "description": "face recognition for react-native",
+  "main": "js/index.js",
+  "scripts": {
+    "precommit": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edritech93/rn-face-recognition.git"
+  },
+  "keywords": [
+    "react-native",
+    "face-recognition",
+    "android",
+    "ios"
+  ],
+  "author": {
+    "name": "Yudi Edri Alviska",
+    "email": "yudiedrialviska@gmail.com",
+    "url": "https://github.com/edritech93"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edritech93/rn-face-recognition/issues"
+  },
+  "homepage": "https://github.com/edritech93/rn-face-recognition#readme",
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.4.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.1.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.3",
+    "react": "16.5.0",
+    "react-native": "0.57.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "git add"
+    ]
+  }
+}
