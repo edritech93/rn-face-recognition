@@ -6,6 +6,7 @@ export default function App(props) {
   return (
     <View style={styles.container}>
       <Text> App </Text>
+      {/* <CameraFaceRecognition /> */}
     </View>
   );
 }

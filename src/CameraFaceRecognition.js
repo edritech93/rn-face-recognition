@@ -1,4 +1,3 @@
-// @flow
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -14,7 +13,7 @@ import {
     PermissionsAndroid,
 } from 'react-native';
 
-const CameraManager: Object = NativeModules.RNCameraManager ||
+const CameraManager = NativeModules.CameraModule ||
     NativeModules.RNCameraModule || {
     stubbed: true,
     Type: {
@@ -46,7 +45,7 @@ const CameraManager: Object = NativeModules.RNCameraManager ||
 
 export const Constants = Camera.Constants;
 
-const RNCamera = requireNativeComponent('RNCamera', Camera, {
+const CameraModule = requireNativeComponent('CameraModule', Camera, {
     nativeOnly: {
         accessibilityComponentType: true,
         accessibilityLabel: true,
@@ -73,13 +72,13 @@ const RNCamera = requireNativeComponent('RNCamera', Camera, {
     },
 });
 
-export default class Camera extends React.Component<PropsType, StateType> {
+export default class CameraModule extends React.Component {
 
-    async takePictureAsync(options?: PictureOptions) {
+    async takePictureAsync(options) {
         return await CameraManager.takePicture(options, this._cameraHandle);
     }
 
-    _setReference = (ref: ?Object) => {
+    _setReference = (ref) => {
         if (ref) {
             this._cameraRef = ref;
             this._cameraHandle = findNodeHandle(ref);
@@ -91,7 +90,7 @@ export default class Camera extends React.Component<PropsType, StateType> {
 
     render() {
         return (
-            <RNCamera
+            <CameraModule
                 style={StyleSheet.absoluteFill}
                 ref={this._setReference}
             />
