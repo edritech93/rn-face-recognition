@@ -28,6 +28,8 @@
   "homepage": "https://github.com/edritech93/rn-face-recognition#readme",
   "devDependencies": {
     "@react-native-community/eslint-config": "^3.0.0",
-    "eslint": "^7.30.0"
+    "eslint": "^7.30.0",
+    "react": "17.0.1",
+    "react-native": "0.64.2"
   }
 }
